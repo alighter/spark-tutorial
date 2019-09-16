@@ -9,8 +9,31 @@ Content:
 ### B. Setup spark standalone <a name="standalone"></a>
 This guideline is a basic setup for standalone. It will help you how to setup and start master and worker on your computer.
 
-1. 
-
+1. Install java
+    ```
+    java -version
+    sudo apt-get install default-jdk
+    ```
+2. Download spark
+    ```
+    curl -O http://mirror.downloadvn.com/apache/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
+    ```
+3. Extract to /usr/local/spark
+    ```
+    sudo tar xvf spark-2.4.4-bin-hadoop2.7.tgz
+    sudo mv spark-2.4.4-bin-hadoop2.7 /usr/local/spark
+    ```
+4. Add Spark path to bash file and execute ~/.bashrc
+    ```
+    nano ~/.bashrc
+    SPARK_HOME=/usr/local/spark
+    export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+    source ~/.bashrc
+    ```
+5. *Option*, You can see more in `/usr/local/spark/bin` or `/usr/local/spark/sbin`. For example, start master and work link to master in standard alone
+    ```
+    /usr/local/spark/sbin/start-all.sh
+    ```
 
 ### C. Setup environment for practicing spark locally <a name="practice"></a>
 This guideline will help you setup virtual environment, install pyspark and jupyterlab for practice
