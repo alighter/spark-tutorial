@@ -83,4 +83,4 @@ This guideline will help you setup virtual environment, install pyspark and jupy
     ```
     
 ### D. Practice <a name="code"></a>
-Let's do something with [jupyter lab](../code/1_introduction.ipynb). Enjoy !
+Let's do something with [jupyter lab](/spark-tutorial/1_basic/code/1_introduction.ipynb). Enjoy !
