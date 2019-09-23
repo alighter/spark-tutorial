@@ -3,8 +3,17 @@ Content:
 - [A. Introduction](#introduction)
 - [B. Setup spark standalone](#standalone)
 - [C. Setup environment for practicing spark locally](#practice)
+- [D. Practice](#code)
 
 ### A. Introduction <a name="introduction"></a>
+- Apache Spark is a computing platform designed to be fast, general purpose and easy to use. A parallel distributed processing, fault tolerance on commodity hardware, scalability, `in-memory computing`
+- Spark unified stack
+    <div align="center">
+        <img src="images/spark_stack.png" alt="Spark unified stack" width="500" />
+    </div>
+- Resilient Distributed Dataset (`RDD`): spark's primary abstraction, distributed collection of elements, parallelized across the cluster, caching. 2 types RDD operations:
+    - `Transformations`: create direct acyclic graph (DAG), lazy evaluation, no return value
+    - `Actions`: Performs the transformations and return a value
 
 ### B. Setup spark standalone <a name="standalone"></a>
 This guideline is a basic setup for standalone. It will help you how to setup and start master and worker on your computer.
@@ -47,10 +56,10 @@ This guideline will help you setup virtual environment, install pyspark and jupy
     ```
     # go to your project
     cd your_project
-    # create virtualenv with python 3.6
+    # create virtualenv with python 3.6 or other versions
     virtualenv -p /usr/bin/python3.6 venv
     ```
-- Active your venv
+- Activate your venv
     ```
     source venv/bin/activate
     ```
@@ -73,3 +82,5 @@ This guideline will help you setup virtual environment, install pyspark and jupy
     jupyter lab
     ```
     
+### D. Practice <a name="code"></a>
+Let's do something with [jupyter lab](/1_basic/code/1_introduction.ipynb). Enjoy !
